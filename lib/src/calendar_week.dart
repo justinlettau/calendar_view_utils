@@ -1,13 +1,16 @@
 import 'calendar_day.dart';
 import 'utils.dart';
 
+/// Calendar week.
 class CalendarWeek {
   CalendarWeek(DateTime date, {int weekStartsOn = DateTime.monday}) {
     _weekStartsOn = weekStartsOn;
     days = _getDays(date);
   }
 
+  /// Collection of days within the week.
   late final List<CalendarDay> days;
+
   late final int _weekStartsOn;
 
   List<CalendarDay> _getDays(DateTime target) {

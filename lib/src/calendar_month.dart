@@ -1,17 +1,24 @@
 import 'calendar_week.dart';
 import 'utils.dart';
 
+/// Calendar month.
 class CalendarMonth {
   CalendarMonth(DateTime date, {int weekStartsOn = DateTime.monday}) {
     _weekStartsOn = weekStartsOn;
-    month = date.month;
     year = date.year;
+    month = date.month;
     weeks = _getWeeks(date);
   }
 
-  late final int month;
+  // Year value.
   late final int year;
+
+  // Month value.
+  late final int month;
+
+  /// Collection of weeks with the month
   late final List<CalendarWeek> weeks;
+
   late final int _weekStartsOn;
 
   List<CalendarWeek> _getWeeks(DateTime target) {
