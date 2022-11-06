@@ -1,6 +1,6 @@
 name: calendar_view_utils
 description: Core classes/utilities useful for building custom calendar views.
-version: 1.0.1
+version: 1.0.2
 homepage: https://github.com/justinlettau/calendar_view_utils
 
 environment:
