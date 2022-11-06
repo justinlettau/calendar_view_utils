@@ -25,37 +25,43 @@ class _CalendarPageState extends State<CalendarPage> {
     return Table(
       border: TableBorder.symmetric(inside: BorderSide()),
       children: [
-        TableRow(children: [
-          for (var item in headers) ...{
-            TableCell(
+        TableRow(
+          children: [
+            for (var item in headers) ...{
+              TableCell(
                 verticalAlignment: TableCellVerticalAlignment.middle,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [Text(item)],
-                )),
-          },
-        ]),
-        for (var week in month.weeks) ...{
-          TableRow(children: [
-            for (var day in week.days) ...{
-              TableCell(
-                  child: Column(
-                children: [
-                  Container(
-                    padding: const EdgeInsets.all(4.0),
-                    margin: const EdgeInsets.only(top: 2.0),
-                    decoration: day.isToday
-                        ? BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.blue,
-                          )
-                        : null,
-                    child: Text(day.day.toString()),
-                  )
-                ],
-              )),
+                ),
+              ),
             },
-          ])
+          ],
+        ),
+        for (var week in month.weeks) ...{
+          TableRow(
+            children: [
+              for (var day in week.days) ...{
+                TableCell(
+                  child: Column(
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.all(4.0),
+                        margin: const EdgeInsets.only(top: 2.0),
+                        decoration: day.isToday
+                            ? BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: Colors.blue,
+                              )
+                            : null,
+                        child: Text(day.day.toString()),
+                      )
+                    ],
+                  ),
+                ),
+              },
+            ],
+          )
         }
       ],
     );
