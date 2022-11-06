@@ -23,8 +23,10 @@ class CalendarMonth {
 
   List<CalendarWeek> _getWeeks(DateTime target) {
     List<CalendarWeek> weeks = [];
-    final start =
-        startOfWeek(startOfMonth(target), weekStartsOn: _weekStartsOn);
+    final start = startOfWeek(
+      startOfMonth(target),
+      weekStartsOn: _weekStartsOn,
+    );
     final end = endOfWeek(endOfMonth(target), weekStartsOn: _weekStartsOn);
 
     final diff = end.difference(start);

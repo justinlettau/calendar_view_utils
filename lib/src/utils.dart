@@ -12,9 +12,9 @@ DateTime endOfWeek(DateTime date, {int weekStartsOn = DateTime.monday}) {
 }
 
 DateTime startOfMonth(DateTime date) {
-  return DateTime(date.year, date.month, 1);
+  return DateTime.utc(date.year, date.month, 1);
 }
 
 DateTime endOfMonth(DateTime date) {
-  return DateTime(date.year, date.month + 1, 0);
+  return DateTime.utc(date.year, date.month + 1, 0);
 }
