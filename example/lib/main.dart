@@ -23,7 +23,7 @@ class _CalendarPageState extends State<CalendarPage> {
     final headers = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
 
     return Table(
-      border: TableBorder.symmetric(inside: BorderSide()),
+      border: TableBorder.symmetric(inside: const BorderSide()),
       children: [
         TableRow(
           children: [
@@ -49,7 +49,7 @@ class _CalendarPageState extends State<CalendarPage> {
                         padding: const EdgeInsets.all(4.0),
                         margin: const EdgeInsets.only(top: 2.0),
                         decoration: day.isToday
-                            ? BoxDecoration(
+                            ? const BoxDecoration(
                                 shape: BoxShape.circle,
                                 color: Colors.blue,
                               )
