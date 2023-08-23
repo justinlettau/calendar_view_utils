@@ -4,7 +4,7 @@ version: 1.0.2
 homepage: https://github.com/justinlettau/calendar_view_utils
 
 environment:
-  sdk: ">=2.17.5 <3.0.0"
+  sdk: "<4.0.0"
 
 dev_dependencies:
   flutter_lints: ^2.0.0
