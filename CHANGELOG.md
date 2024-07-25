@@ -2,6 +2,13 @@
 
 - Fix: utc dates.
 
+## 1.0.0 (2024-07-25)
+
+
+### Bug Fixes
+
+* utc dates ([67a7bfe](https://github.com/justinlettau/calendar_view_utils/commit/67a7bfe9eee3abcaaf759a0b7b4601dd8debf534))
+
 ## 1.0.1
 
 - Add docs.
